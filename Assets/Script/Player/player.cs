@@ -95,14 +95,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
 
 
-        //下か上に落っこちたらMainsceceシーンを再読み込み
+        //下か上に落っこちたらMainsceneシーンを再読み込み
         if (transform.position.y < -20.0f)
         {
-            SceneManager.LoadScene("Mainscece");
+            SceneManager.LoadScene("Mainscene");
         }
         if (transform.position.y > 20.0f)
         {
-            SceneManager.LoadScene("Mainscece");
+            SceneManager.LoadScene("Mainscene");
         }
 
     }
