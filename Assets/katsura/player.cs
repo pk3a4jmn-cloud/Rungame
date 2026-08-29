@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +10,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     int a = 0;
     float j = 0;
 
-    int ’n–ÊÚ’n = 0;
+    int åœ°é¢æ¥åœ° = 0;
 
     float jumpForce = 800f;
     Rigidbody2D rb;
@@ -29,7 +29,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
 
-        //ƒvƒŒƒCƒ„[‚ÌƒAƒjƒ[ƒVƒ‡ƒ“
+        //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³
         a++;
         if (a % 8 >= 4)
         {
@@ -40,11 +40,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
             this.spriteRenderer.sprite = kuro1;
         }
 
-        //ƒvƒŒƒCƒ„[‚ğ‰E‚É“®‚©‚·
+        //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’å³ã«å‹•ã‹ã™
         this.transform.position = new Vector3(this.transform.position.x + 0.01f, this.transform.position.y, 0);
 
-        //zƒL[‚ÅƒWƒƒƒ“ƒv ’n–Ê‚É—§‚Á‚Ä‚¢‚é‚Ì‚İ
-        if (Keyboard.current.zKey.wasPressedThisFrame && ’n–ÊÚ’n == 1)
+        //zã‚­ãƒ¼ã§ã‚¸ãƒ£ãƒ³ãƒ— åœ°é¢ã«ç«‹ã£ã¦ã„ã‚‹æ™‚ã®ã¿
+        if (Keyboard.current.zKey.wasPressedThisFrame && åœ°é¢æ¥åœ° == 1)
         {
             this.rb.AddForce(transform.up * this.jumpForce);
         }
@@ -52,9 +52,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
 
 
-
-
-        //GƒL[‚Åd—Í”½“]@Rigidbody2D‚Ìd—Íİ’è‚ğ•Ï‚¦‚é
+        //Gã‚­ãƒ¼ã§é‡åŠ›åè»¢ã€€Rigidbody2Dã®é‡åŠ›è¨­å®šã‚’å¤‰ãˆã‚‹
         if (Keyboard.current.gKey.wasPressedThisFrame)
         {
             if (rb.gravityScale > 0.0f) {
@@ -70,7 +68,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
 
 
-        //‰º‚©ã‚É—‚Á‚±‚¿‚½‚çkatsuraƒV[ƒ“‚ğÄ“Ç‚İ‚İ
+        //ä¸‹ã‹ä¸Šã«è½ã£ã“ã¡ãŸã‚‰katsuraã‚·ãƒ¼ãƒ³ã‚’å†èª­ã¿è¾¼ã¿
         if (transform.position.y < -20.0f)
         {
             SceneManager.LoadScene("katsura");
@@ -84,12 +82,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        ’n–ÊÚ’n = 1;
+        åœ°é¢æ¥åœ° = 1;
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        ’n–ÊÚ’n = 0;
+        åœ°é¢æ¥åœ° = 0;
     }
 
 
