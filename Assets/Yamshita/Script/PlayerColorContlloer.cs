@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class PlayerColorContlloer : MonoBehaviour
@@ -16,6 +16,4 @@ public class PlayerColorContlloer : MonoBehaviour
         colorType = color;
         Debug.Log("色が変わったよ");
     }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 }
