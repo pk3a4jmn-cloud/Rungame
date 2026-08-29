@@ -1448,6 +1448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936730929}
   - component: {fileID: 936730928}
+  - component: {fileID: 936730930}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1529,6 +1530,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &936730930
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936730927}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1054352488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,9 +1727,11 @@ GameObject:
   - component: {fileID: 1210004540}
   - component: {fileID: 1210004544}
   - component: {fileID: 1210004543}
-  m_Layer: 0
-  m_Name: IMG_5182_0
-  m_TagString: Untagged
+  - component: {fileID: 1210004546}
+  - component: {fileID: 1210004545}
+  m_Layer: 7
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1699,9 +1748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1a03bf9d040b644a5e0983f16cb491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  shiro0: {fileID: -5538810942529525774, guid: f1202da81a05a254f95ed931937042fc, type: 3}
-  shiro1: {fileID: 3026516191082340819, guid: d15f9b3a98464564089d4d94b7da67f5, type: 3}
-  shiro2: {fileID: 3964466543063010452, guid: 09a627a1278a5484fb35e7292f3e33c7, type: 3}
 --- !u!212 &1210004541
 SpriteRenderer:
   serializedVersion: 2
@@ -1751,7 +1797,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5538810942529525774, guid: f1202da81a05a254f95ed931937042fc, type: 3}
+  m_Sprite: {fileID: -5538810942529525774, guid: 5200f4eb310b56e42b888f6942e18108, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -1839,6 +1885,42 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.54
+--- !u!114 &1210004545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210004539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a84497295f36475eac05fdbf2551c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerColorContlloer
+  colorWheelController: {fileID: 0}
+  colorType: 1
+--- !u!95 &1210004546
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210004539}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbfb42ce301a34bb8a4bfe19142ddcb0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1589164951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,7 +2207,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1814198734}
   - component: {fileID: 1814198733}
-  m_Layer: 0
+  - component: {fileID: 1814198735}
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2200,12 +2283,25 @@ Transform:
   m_GameObject: {fileID: 1814198732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.03, y: -0.82, z: 0}
+  m_LocalPosition: {x: -41.17, y: -2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1814198735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814198732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465e001e3229f4b75b274948e1d26af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GimmickColorChanger
+  targetColorType: 2
 --- !u!1 &1845409183
 GameObject:
   m_ObjectHideFlags: 0
