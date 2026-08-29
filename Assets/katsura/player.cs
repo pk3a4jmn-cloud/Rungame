@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    public Sprite kuro0;
-    public Sprite kuro1;
+    public Sprite shiro0;
+    public Sprite shiro1;
+    public Sprite shiro2;
 
     int a = 0;
     float j = 0;
@@ -42,17 +43,21 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         //プレイヤーのアニメーション
         a++;
-        if (a % 8 >= 4)
+        if (a % 24 > 8)
         {
-            this.spriteRenderer.sprite = kuro0;
+            this.spriteRenderer.sprite = shiro0;
+        }
+        else if (a % 24 > 16)
+        {
+            this.spriteRenderer.sprite = shiro1;
         }
         else
         {
-            this.spriteRenderer.sprite = kuro1;
+            this.spriteRenderer.sprite = shiro2;
         }
 
-        //プレイヤーを右に動かす
-        this.transform.position = new Vector3(this.transform.position.x + 0.05f, this.transform.position.y, 0);
+            //プレイヤーを右に動かす
+            this.transform.position = new Vector3(this.transform.position.x + 0.05f, this.transform.position.y, 0);
         
         //カメラを右に動かす
         //メインカメラと親子になっているカメラ操作用ブロックを動かしています。(メインカメラの動かし方が分からない為)
