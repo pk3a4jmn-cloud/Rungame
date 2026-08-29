@@ -4,29 +4,22 @@ using UnityEngine.SceneManagement;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 { 
-
-
-
     int jimen = 0;
 
     float jumpForce = 600f;
+
     Rigidbody2D rb;
-
-
-
     GameObject camera;
 
     int jumpstart = 0;
 
-
-
+    int g = 1;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Application.targetFrameRate = 60;
-
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -36,9 +29,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-            //プレイヤーを右に動かす
-            this.transform.position = new Vector3(this.transform.position.x - 0.05f, this.transform.position.y, 0);
+        //プレイヤーを右に動かす
+        this.transform.position = new Vector3(this.transform.position.x - 0.05f, this.transform.position.y, 0);
         
         //カメラを右に動かす
         //メインカメラと親子になっているカメラ操作用ブロックを動かしています。(メインカメラの動かし方が分からない為)
@@ -75,13 +67,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
             }
         }
 
-
-
-
-
-        //Gキーで重力反転　Rigidbody2Dの重力設定を変える プレイヤ画像を上下反転
-        if (Keyboard.current.gKey.wasPressedThisFrame)
+        //Gキーで重力反転　Rigidbody2Dの重力設定を変える
+        //プレイヤ画像を上下反転
+        // 一度使うと重力切り替えの権利が消える　地面接地で復活
+        if (Keyboard.current.gKey.wasPressedThisFrame && g == 1)
         {
+            g = 0;
             if (rb.gravityScale > 0.0f) {
                 rb.gravityScale = -4.0f;
                 GetComponent<SpriteRenderer>().flipY = true;
@@ -93,8 +84,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             }
         }
 
-
-
+        /*
         //下か上に落っこちたらMainsceneシーンを再読み込み
         if (transform.position.y < -20.0f)
         {
@@ -104,20 +94,19 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             SceneManager.LoadScene("Mainscene");
         }
+        */
+
 
     }
-
-
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         jimen = 1;
+        g = 1;
     }
     void OnCollisionExit2D(Collision2D collision)
     {
         jimen = 0;
+        g = 1;
     }
-
-
 }
 
