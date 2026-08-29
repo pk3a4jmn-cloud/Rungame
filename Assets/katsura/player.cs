@@ -78,7 +78,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
 
 
-        //Gキーで重力反転　Rigidbody2Dの重力設定を変える
+        //Gキーで重力反転　Rigidbody2Dの重力設定を変える プレイヤ画像を上下反転
         if (Keyboard.current.gKey.wasPressedThisFrame)
         {
             if (rb.gravityScale > 0.0f) {
