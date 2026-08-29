@@ -147,7 +147,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458365616}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80ac171e1d46b2d4fa051da92e05933a, type: 3}
   m_Name: 
@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 458365616}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -3.74, z: 0}
+  m_LocalPosition: {x: -6.32, y: -3.74, z: 0}
   m_LocalScale: {x: 1, y: 1.0394, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -462,7 +462,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915342839}
-  - component: {fileID: 915342840}
   m_Layer: 0
   m_Name: GimmickManager
   m_TagString: Untagged
@@ -480,53 +479,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.82977, y: -1.50979, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &915342840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915342837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80a321fff2c4db64ca1bafdc10eb13d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClosingWall
-  wallPrefub: {fileID: 2124390505}
-  instanPoint: {fileID: 1056599849}
-  closingSpeed: -6.6
-  closingDistance: 10
---- !u!1 &1056599849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1056599850}
-  m_Layer: 0
-  m_Name: WallPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1056599850
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056599849}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -619,7 +571,7 @@ Transform:
   m_GameObject: {fileID: 1238993815}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6, y: 10.3, z: 0}
+  m_LocalPosition: {x: -2.88, y: -0.6, z: 0}
   m_LocalScale: {x: 1.9295496, y: 14.286729, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -832,9 +784,8 @@ GameObject:
   - component: {fileID: 2124390507}
   - component: {fileID: 2124390506}
   - component: {fileID: 2124390508}
-  - component: {fileID: 2124390509}
   m_Layer: 7
-  m_Name: Wall
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -908,8 +859,8 @@ Transform:
   m_GameObject: {fileID: 2124390505}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.2173, y: 0.8674, z: 0}
-  m_LocalScale: {x: 1.8682188, y: 10.542073, z: 1}
+  m_LocalPosition: {x: 6.21, y: -2.06, z: 0}
+  m_LocalScale: {x: 1.2212, y: 4.8336, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -960,33 +911,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &2124390509
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124390505}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -995,6 +919,5 @@ SceneRoots:
   - {fileID: 1318973759}
   - {fileID: 458365619}
   - {fileID: 1238993817}
-  - {fileID: 2124390507}
-  - {fileID: 1056599850}
   - {fileID: 915342839}
+  - {fileID: 2124390507}
