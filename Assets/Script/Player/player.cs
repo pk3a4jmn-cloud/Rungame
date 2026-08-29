@@ -40,6 +40,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         //マリオみたいにボタンを押す長さでジャンプ力を変える
         if (Keyboard.current.zKey.wasPressedThisFrame && jimen == 1)
         {
+            jimen = 0;
             jumpstart = 20;
             if (rb.gravityScale > 0.0f)
             {
@@ -103,10 +104,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
         jimen = 1;
         g = 1;
     }
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        jimen = 0;
-        g = 1;
-    }
+
 }
 
