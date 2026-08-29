@@ -3,20 +3,16 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class NewMonoBehaviourScript : MonoBehaviour
-{
-    public Sprite shiro0;
-    public Sprite shiro1;
-    public Sprite shiro2;
+{ 
 
-    int a = 0;
-    float j = 0;
+
 
     int jimen = 0;
 
     float jumpForce = 600f;
     Rigidbody2D rb;
 
-    SpriteRenderer spriteRenderer;
+
 
     GameObject camera;
 
@@ -30,7 +26,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
-        this.spriteRenderer = GetComponent<SpriteRenderer>();       
+
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -40,21 +36,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //プレイヤーのアニメーション
-        a++;
-        if (a % 24 > 8)
-        {
-            this.spriteRenderer.sprite = shiro0;
-        }
-        else if (a % 24 > 16)
-        {
-            this.spriteRenderer.sprite = shiro1;
-        }
-        else
-        {
-            this.spriteRenderer.sprite = shiro2;
-        }
 
             //プレイヤーを右に動かす
             this.transform.position = new Vector3(this.transform.position.x - 0.05f, this.transform.position.y, 0);
@@ -114,14 +95,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
 
 
-        //下か上に落っこちたらkatsuraシーンを再読み込み
+        //下か上に落っこちたらMainsceceシーンを再読み込み
         if (transform.position.y < -20.0f)
         {
-            SceneManager.LoadScene("katsura");
+            SceneManager.LoadScene("Mainscece");
         }
         if (transform.position.y > 20.0f)
         {
-            SceneManager.LoadScene("katsura");
+            SceneManager.LoadScene("Mainscece");
         }
 
     }
