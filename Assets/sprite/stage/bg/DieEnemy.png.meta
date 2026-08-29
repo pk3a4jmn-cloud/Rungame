@@ -3,14 +3,14 @@ guid: d9b94abcfeed75847b6e483aac5fcf68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8596640243658272642
-    second: Enemy_0
+      213: 8899198880819313719
+    second: DieEnemy_0
   - first:
-      213: -7642239419928554605
-    second: Enemy_1
+      213: -2886099303102165316
+    second: DieEnemy_1
   - first:
-      213: -3876759189950653258
-    second: Enemy_2
+      213: -298368493253885271
+    second: DieEnemy_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -158,7 +158,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_0
+      name: DieEnemy_0
       rect:
         serializedVersion: 2
         x: 0
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28f241131c66d4770800000000000000
-      internalID: 8596640243658272642
+      spriteID: 73cf9cc6b3e408b70800000000000000
+      internalID: 8899198880819313719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_1
+      name: DieEnemy_1
       rect:
         serializedVersion: 2
         x: 785
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 393dba6ecbf41f590800000000000000
-      internalID: -7642239419928554605
+      spriteID: cbec71c99f382f7d0800000000000000
+      internalID: -2886099303102165316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_2
+      name: DieEnemy_2
       rect:
         serializedVersion: 2
         x: 1187
@@ -217,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bc92438e0cf23ac0800000000000000
-      internalID: -3876759189950653258
+      spriteID: 9a20f6baf6bfbdbf0800000000000000
+      internalID: -298368493253885271
       vertices: []
       indices: 
       edges: []
@@ -237,9 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Enemy_0: 8596640243658272642
-      Enemy_1: -7642239419928554605
-      Enemy_2: -3876759189950653258
+      DieEnemy_0: 8899198880819313719
+      DieEnemy_1: -2886099303102165316
+      DieEnemy_2: -298368493253885271
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

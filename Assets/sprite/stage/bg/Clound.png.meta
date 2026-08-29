@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 68b1857bc9e7c8b41a1ed7abe68fd658
+guid: 1a796b18ee2798940aa2ef93b7288084
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3354133111887405239
-    second: "\u30A4\u30E9\u30B9\u30C8 20260829 4_0"
+      213: -9210270104559757600
+    second: Clound_0
   - first:
-      213: -637047118329633340
-    second: "\u30A4\u30E9\u30B9\u30C8 20260829 4_1"
+      213: -7220956886775046064
+    second: Clound_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +87,59 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -103,7 +155,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u30A4\u30E9\u30B9\u30C8 20260829 4_0"
+      name: Clound_0
       rect:
         serializedVersion: 2
         x: 117
@@ -118,14 +170,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b0ac675b464c8e20800000000000000
-      internalID: 3354133111887405239
+      spriteID: 0e6d054532c8e2080800000000000000
+      internalID: -9210270104559757600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u30A4\u30E9\u30B9\u30C8 20260829 4_1"
+      name: Clound_1
       rect:
         serializedVersion: 2
         x: 645
@@ -140,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c5a6c66501c827f0800000000000000
-      internalID: -637047118329633340
+      spriteID: 050ec5148f10acb90800000000000000
+      internalID: -7220956886775046064
       vertices: []
       indices: 
       edges: []
@@ -160,8 +212,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u30A4\u30E9\u30B9\u30C8 20260829 4_0": 3354133111887405239
-      "\u30A4\u30E9\u30B9\u30C8 20260829 4_1": -637047118329633340
+      Clound_0: -9210270104559757600
+      Clound_1: -7220956886775046064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
