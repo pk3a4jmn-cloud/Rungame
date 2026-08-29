@@ -16,6 +16,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
     Rigidbody2D rb;
 
     SpriteRenderer spriteRenderer;
+
+    GameObject camera;
+
+
+
+
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +32,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         this.spriteRenderer = GetComponent<SpriteRenderer>();       
 
         rb = GetComponent<Rigidbody2D>();
+
+        camera = GameObject.Find("camerablock");
     }
 
     // Update is called once per frame
@@ -41,15 +52,25 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
 
         //プレイヤーを右に動かす
-        this.transform.position = new Vector3(this.transform.position.x + 0.01f, this.transform.position.y, 0);
+        this.transform.position = new Vector3(this.transform.position.x + 0.05f, this.transform.position.y, 0);
+        
+        //カメラを右に動かす
+        //メインカメラと親子になっているカメラ操作用ブロックを動かしています。(メインカメラの動かし方が分からない為)
+        camera.transform.position = new Vector3(camera.transform.position.x + 0.05f, camera.transform.position.y, 0);
 
         //zキーでジャンプ 地面に立っている時のみ
         if (Keyboard.current.zKey.wasPressedThisFrame && jimen == 1)
         {
-            this.rb.AddForce(transform.up * this.jumpForce);
+            if (rb.gravityScale > 0.0f)
+            {
+                this.rb.AddForce(transform.up * this.jumpForce);
+            }
+            else
+            {
+                this.rb.AddForce(transform.up * -this.jumpForce);
+            }
+
         }
-
-
 
 
         //Gキーで重力反転　Rigidbody2Dの重力設定を変える
