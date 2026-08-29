@@ -10,7 +10,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     int a = 0;
     float j = 0;
 
-    int 地面接地 = 0;
+    int jimen = 0;
 
     float jumpForce = 800f;
     Rigidbody2D rb;
@@ -44,7 +44,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         this.transform.position = new Vector3(this.transform.position.x + 0.01f, this.transform.position.y, 0);
 
         //zキーでジャンプ 地面に立っている時のみ
-        if (Keyboard.current.zKey.wasPressedThisFrame && 地面接地 == 1)
+        if (Keyboard.current.zKey.wasPressedThisFrame && jimen == 1)
         {
             this.rb.AddForce(transform.up * this.jumpForce);
         }
@@ -80,14 +80,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     }
 
+
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        地面接地 = 1;
+        jimen = 1;
     }
-
     void OnCollisionExit2D(Collision2D collision)
     {
-        地面接地 = 0;
+        jimen = 0;
     }
 
 
