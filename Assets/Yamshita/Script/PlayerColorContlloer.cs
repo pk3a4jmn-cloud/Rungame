@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerColorContlloer : MonoBehaviour
 {
     public static PlayerColorContlloer Instance { private set;get;}
+    [SerializeField]
+    private ColorWheelController colorWheelController;
 
     public ColorType colorType;
     void Awake()
@@ -14,6 +16,7 @@ public class PlayerColorContlloer : MonoBehaviour
     public void ChangeColor(ColorType color)
     {
         colorType = color;
-        Debug.Log("色が変わったよ");
+        colorWheelController.SetColor(colorType);
+        Debug.Log(color+"に色が変わったよ");
     }
 }

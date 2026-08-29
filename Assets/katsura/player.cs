@@ -13,14 +13,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     int jimen = 0;
 
-    float jumpForce = 800f;
+    float jumpForce = 600f;
     Rigidbody2D rb;
 
     SpriteRenderer spriteRenderer;
 
     GameObject camera;
 
-
+    int jumpstart = 0;
 
 
 
@@ -57,15 +57,17 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
 
             //プレイヤーを右に動かす
-            this.transform.position = new Vector3(this.transform.position.x + 0.05f, this.transform.position.y, 0);
+            this.transform.position = new Vector3(this.transform.position.x - 0.05f, this.transform.position.y, 0);
         
         //カメラを右に動かす
         //メインカメラと親子になっているカメラ操作用ブロックを動かしています。(メインカメラの動かし方が分からない為)
-        camera.transform.position = new Vector3(camera.transform.position.x + 0.05f, camera.transform.position.y, 0);
+        camera.transform.position = new Vector3(camera.transform.position.x - 0.05f, camera.transform.position.y, 0);
 
         //zキーでジャンプ 地面に立っている時のみ
+        //マリオみたいにボタンを押す長さでジャンプ力を変える
         if (Keyboard.current.zKey.wasPressedThisFrame && jimen == 1)
         {
+            jumpstart = 20;
             if (rb.gravityScale > 0.0f)
             {
                 this.rb.AddForce(transform.up * this.jumpForce);
@@ -74,8 +76,26 @@ public class NewMonoBehaviourScript : MonoBehaviour
             {
                 this.rb.AddForce(transform.up * -this.jumpForce);
             }
-
         }
+        if (jumpstart >= 1)
+        {
+            jumpstart--;
+            if (rb.gravityScale > 0.0f)
+            {
+                this.rb.AddForce(transform.up * this.jumpForce / 20);
+            }
+            else
+            {
+                this.rb.AddForce(transform.up * -this.jumpForce / 20);
+            }
+            if (Keyboard.current.zKey.wasReleasedThisFrame || jumpstart < 0)
+            {
+                jumpstart = 0;
+            }
+        }
+
+
+
 
 
         //Gキーで重力反転　Rigidbody2Dの重力設定を変える プレイヤ画像を上下反転

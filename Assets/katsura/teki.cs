@@ -13,13 +13,13 @@ public class teki : MonoBehaviour
     void Update()
     {
 
-        //カメラが近づいたら動作開始 左にまっすぐ進む
-        if (camera.transform.position.x + 10.0f > this.transform.position.x)
+        //カメラが近づいたら動作開始 右にまっすぐ進む
+        if (camera.transform.position.x - 10.0f < this.transform.position.x)
         {
-            this.transform.position = new Vector3(this.transform.position.x - 0.05f, this.transform.position.y, 0);
+            this.transform.position = new Vector3(this.transform.position.x + 0.10f, this.transform.position.y, 0);
         }
         //画面の左に出たら消える
-        if (camera.transform.position.x - 10.0f > this.transform.position.x)
+        if (camera.transform.position.x + 10.0f < this.transform.position.x)
         {
             Destroy(gameObject);
         }
