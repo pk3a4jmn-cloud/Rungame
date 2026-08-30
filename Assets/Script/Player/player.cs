@@ -67,7 +67,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             {
                 this.rb.AddForce(transform.up * -this.jumpForce / 20);
             }
-            if (Keyboard.current.zKey.wasReleasedThisFrame || jumpstart < 0)
+            if (Keyboard.current.spaceKey.wasReleasedThisFrame || jumpstart < 0)
             {
                 jumpstart = 0;
             }
