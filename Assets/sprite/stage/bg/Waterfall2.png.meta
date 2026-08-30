@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: e10f60be175eaff48991674a0c0b6877
+guid: 68b1857bc9e7c8b41a1ed7abe68fd658
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5129384428882541821
-    second: Waterfall_0
+      213: 3354133111887405239
+    second: "\u30A4\u30E9\u30B9\u30C8 20260829 4_0"
   - first:
-      213: 7568011105004788439
-    second: Waterfall_1
+      213: -637047118329633340
+    second: "\u30A4\u30E9\u30B9\u30C8 20260829 4_1"
   - first:
-      213: 1006883245280364660
-    second: Waterfall_2
+      213: 2537804548862845455
+    second: "\u30A4\u30E9\u30B9\u30C8 20260829 4_2"
+  - first:
+      213: -1258497146665688340
+    second: "\u30A4\u30E9\u30B9\u30C8 20260829 4_3"
+  - first:
+      213: 3643303397664802236
+    second: "\u30A4\u30E9\u30B9\u30C8 20260829 4_4"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -90,59 +96,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -158,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Waterfall_0
+      name: "\u30A4\u30E9\u30B9\u30C8 20260829 4_0"
       rect:
         serializedVersion: 2
-        x: 255
-        y: 108
-        width: 91
-        height: 60
+        x: 338
+        y: 293
+        width: 27
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,41 +127,63 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3034900e904c0d8b0800000000000000
-      internalID: -5129384428882541821
+      spriteID: 7b0ac675b464c8e20800000000000000
+      internalID: 3354133111887405239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Waterfall_1
+      name: "\u30A4\u30E9\u30B9\u30C8 20260829 4_1"
       rect:
         serializedVersion: 2
-        x: 337
-        y: 2
-        width: 855
-        height: 1013
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7da9502c00af60960800000000000000
-      internalID: 7568011105004788439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Waterfall_2
-      rect:
-        serializedVersion: 2
-        x: 880
+        x: 354
         y: 0
-        width: 108
+        width: 838
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5a6c66501c827f0800000000000000
+      internalID: -637047118329633340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u30A4\u30E9\u30B9\u30C8 20260829 4_2"
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 200
+        width: 49
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0227549ac7183320800000000000000
+      internalID: 2537804548862845455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u30A4\u30E9\u30B9\u30C8 20260829 4_3"
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 126
+        width: 71
         height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,8 +193,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4788a351afa29fd00800000000000000
-      internalID: 1006883245280364660
+      spriteID: ce2262e438be88ee0800000000000000
+      internalID: -1258497146665688340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u30A4\u30E9\u30B9\u30C8 20260829 4_4"
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 89
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb5c8ca132d9f8230800000000000000
+      internalID: 3643303397664802236
       vertices: []
       indices: 
       edges: []
@@ -237,9 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Waterfall_0: -5129384428882541821
-      Waterfall_1: 7568011105004788439
-      Waterfall_2: 1006883245280364660
+      "\u30A4\u30E9\u30B9\u30C8 20260829 4_0": 3354133111887405239
+      "\u30A4\u30E9\u30B9\u30C8 20260829 4_1": -637047118329633340
+      "\u30A4\u30E9\u30B9\u30C8 20260829 4_2": 2537804548862845455
+      "\u30A4\u30E9\u30B9\u30C8 20260829 4_3": -1258497146665688340
+      "\u30A4\u30E9\u30B9\u30C8 20260829 4_4": 3643303397664802236
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -839,7 +839,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &528830989
 Transform:
@@ -1281,7 +1281,8 @@ Transform:
   m_LocalPosition: {x: -0.4942, y: -0.66042, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2096086369}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639118420
@@ -1786,17 +1787,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096086365}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1791341803}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1588034565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.4942, y: 0.66042}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1001 &1571961574484526121
@@ -1868,8 +1869,7 @@ SceneRoots:
   - {fileID: 2037500402}
   - {fileID: 1639118424}
   - {fileID: 528830989}
-  - {fileID: 2096086369}
-  - {fileID: 1343915831}
   - {fileID: 1588034565}
+  - {fileID: 1343915831}
   - {fileID: 480553618}
   - {fileID: 1571961574484526121}
