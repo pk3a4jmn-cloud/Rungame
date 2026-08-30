@@ -35,10 +35,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
         //カメラを右に動かす
         //メインカメラと親子になっているカメラ操作用ブロックを動かしています。(メインカメラの動かし方が分からない為)
         camera.transform.position = new Vector3(camera.transform.position.x - 0.05f, camera.transform.position.y, 0);
+        
+        if(camera.transform.position.x + 2.0f < this.transform.position.x)
+        {
+            this.transform.position = new Vector3(this.transform.position.x - 0.02f, this.transform.position.y, 0);
+        }
 
-        //zキーでジャンプ 地面に立っている時のみ
-        //マリオみたいにボタンを押す長さでジャンプ力を変える
-        if (Keyboard.current.zKey.wasPressedThisFrame && jimen == 1)
+            //zキーでジャンプ 地面に立っている時のみ
+            //マリオみたいにボタンを押す長さでジャンプ力を変える
+            if (Keyboard.current.zKey.wasPressedThisFrame && jimen == 1)
         {
             jimen = 0;
             jumpstart = 20;
