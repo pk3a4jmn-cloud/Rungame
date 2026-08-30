@@ -76,7 +76,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         //Gキーで重力反転　Rigidbody2Dの重力設定を変える
         //プレイヤ画像を上下反転
         // 一度使うと重力切り替えの権利が消える　地面接地で復活
-        if (Keyboard.current.gKey.wasPressedThisFrame && g == 1)
+        if (Keyboard.current.wKey.wasPressedThisFrame && g == 1)
         {
             g = 0;
             if (rb.gravityScale > 0.0f) {
@@ -94,15 +94,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
         //下か上に落っこちたらMainsceneシーンを再読み込み
         if (transform.position.y < -25.0f)
         {
-            Debug.Log("死にました");
+            Debug.Log("死にました(画面外)");
         }
         if (transform.position.y > 25.0f)
         {
-            Debug.Log("死にました");
+            Debug.Log("死にました(画面外)");
         }
         if (transform.position.x > camera.transform.position.x + 11.1f)
         {
-            Debug.Log("死にました");
+            Debug.Log("死にました(画面外)");
         }
 
 
@@ -112,6 +112,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         jimen = 1;
         g = 1;
     }
+
 
 }
 
