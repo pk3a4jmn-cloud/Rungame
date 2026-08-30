@@ -100,7 +100,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             Debug.Log("死にました");
         }
-        if (transform.position.x > camera.transform.position.x + 11.0f)
+        if (transform.position.x > camera.transform.position.x + 11.1f)
         {
             Debug.Log("死にました");
         }
