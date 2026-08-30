@@ -72,7 +72,7 @@ public class hantenblock : MonoBehaviour
             i += 0.1f;
             if (count == f + 5)
             {
-                gameObject.layer = layer2;
+                gameObject.layer = layer1;
             }
         }
         else if (count < f + 10 + f)
@@ -83,7 +83,7 @@ public class hantenblock : MonoBehaviour
             i -= 0.1f;
             if (count == f + 10 + f + 5)
             {
-                gameObject.layer = layer1;
+                gameObject.layer = layer2;
             }
         }
         else
