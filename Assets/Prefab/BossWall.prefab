@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7221240293840603753}
   - component: {fileID: 267513831119301161}
   - component: {fileID: 3406369335584720223}
+  - component: {fileID: 7145301039964596553}
   m_Layer: 7
   m_Name: BossWall
   m_TagString: Untagged
@@ -180,3 +181,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossWall
   render: {fileID: 5583013877996069885}
+--- !u!114 &7145301039964596553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893014198876910138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512d54fde0f3e19439f6a1beb1bc2372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::sibouhantei
