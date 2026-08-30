@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: c58ff2971fb6a1d4282c4757761050a3
+guid: 3f195ae58e4ee4b038844e4781a8ccdf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3964466543063010452
-    second: IMG_5184_0
+      213: -6071154763548150270
+    second: "\u30EA\u30B5\u3099\u30EB\u30C8 2\u30D8\u309A\u30A2\u76EE_0"
+  - first:
+      213: -11302591754373336
+    second: "\u30EA\u30B5\u3099\u30EB\u30C8 2\u30D8\u309A\u30A2\u76EE_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_5184_0
+      name: "\u30EA\u30B5\u3099\u30EB\u30C8 2\u30D8\u309A\u30A2\u76EE_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 123
+        x: 131
+        y: 383
+        width: 39
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49c0137f05d940730800000000000000
-      internalID: 3964466543063010452
+      spriteID: 206ba4ea8eceebba0800000000000000
+      internalID: -6071154763548150270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u30EA\u30B5\u3099\u30EB\u30C8 2\u30D8\u309A\u30A2\u76EE_1"
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 381
+        width: 36
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82770794a58d7dff0800000000000000
+      internalID: -11302591754373336
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_5184_0: 3964466543063010452
+      "\u30EA\u30B5\u3099\u30EB\u30C8 2\u30D8\u309A\u30A2\u76EE_0": -6071154763548150270
+      "\u30EA\u30B5\u3099\u30EB\u30C8 2\u30D8\u309A\u30A2\u76EE_1": -11302591754373336
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
