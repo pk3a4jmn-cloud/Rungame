@@ -18,6 +18,7 @@ public class BossWall : MonoBehaviour
     private void Start()
     {
         var layer = gameObject.layer;
+        Debug.Log(layer);
         render.color = _colors[layer - 6];
     }
 
