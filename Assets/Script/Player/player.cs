@@ -110,12 +110,12 @@ public class Player : MonoBehaviour
 
         
         //下か上に落っこちたらMainsceneシーンを再読み込み
-        if (transform.position.y < -25.0f)
+        if (transform.position.y < -8.0f)
         {
             Debug.Log("死にました(画面外)");
             shibou();
         }
-        if (transform.position.y > 25.0f)
+        if (transform.position.y > 8.0f)
         {
             Debug.Log("死にました(画面外)");
             shibou();
