@@ -29,7 +29,7 @@ public class PlayerColorContlloer : MonoBehaviour
     public void ChangeColor(ColorType color)
     {
         colorType = color;
-        colorWheelController.SetColor(colorType);
+        colorWheelController?.SetColor(colorType);
         Debug.Log(color + "に色が変わったよ");
 
 
