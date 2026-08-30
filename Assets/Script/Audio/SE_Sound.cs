@@ -1,4 +1,6 @@
 public enum SE_Sound
 {
-    jump
+    jump,
+    GravityChange,
+    Button
 }

@@ -1,5 +1,5 @@
 public enum BGM_Sound
 {
-    Titlle,
+    Title,
     Main
 }
