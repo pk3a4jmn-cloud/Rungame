@@ -20,7 +20,11 @@ public class PlayerColorContlloer : MonoBehaviour
     [SerializeField]
     private ColorWheelController colorWheelController;
 
-    public ColorType colorType;
+    public ColorType colorType = ColorType.white;
+    void Start()
+    {
+        ChangeColor(colorType);
+    }
     void Awake()
     {
         Instance = this;
