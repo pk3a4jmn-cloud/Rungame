@@ -2,7 +2,7 @@
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Player : MonoBehaviour
 { 
     int jimen = 0;
 
@@ -15,6 +15,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     int g = 1;
 
+    public GameObject Prefab_gameover;
+
+    bool shibouflag = false;
+
+    int shiboucount = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,11 +29,24 @@ public class NewMonoBehaviourScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         camera = GameObject.Find("camerablock");
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(shibouflag)
+        {
+            shiboucount++;
+            if(shiboucount > 150)
+            {
+                SceneManager.LoadScene("Tittlescene");
+            }
+
+            return;
+        }
+
         //プレイヤーを右に動かす
         this.transform.position = new Vector3(this.transform.position.x - 0.05f, this.transform.position.y, 0);
         
@@ -95,15 +113,20 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (transform.position.y < -25.0f)
         {
             Debug.Log("死にました(画面外)");
+            shibou();
         }
         if (transform.position.y > 25.0f)
         {
             Debug.Log("死にました(画面外)");
+            shibou();
         }
         if (transform.position.x > camera.transform.position.x + 11.1f)
         {
             Debug.Log("死にました(画面外)");
+            shibou();
         }
+
+
 
 
     }
@@ -113,6 +136,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
         g = 1;
     }
 
+    public void shibou()
+    {
+        shibouflag = true;
+        GameObject go = Instantiate(Prefab_gameover);
+        go.transform.SetParent(camera.transform);
+        go.transform.localPosition = new Vector3(0.0f, -10.0f, 0.0f);
+    }
 
 }
 
