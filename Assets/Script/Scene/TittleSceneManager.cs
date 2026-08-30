@@ -8,21 +8,30 @@ public class TittleSceneManager : MonoBehaviour
     public void Start()
     {
         ruleScene.SetActive(false);
+         SoundManager.PlayBGM(BGM_Sound.Title);
+    }
+    public void OnButtonClick()
+    {
+        SoundManager.PlaySE(SE_Sound.Button);
     }
     public void OnStartButtonClick()
     {
+        OnButtonClick();
         SceneManager.LoadScene("MainScene");
+        
     }
     public void OnOptionButtonClick()
     {
+        OnButtonClick();
         ruleScene.SetActive(true);
     }
-     public void OnOptionBackButtonClick()
+    public void OnOptionBackButtonClick()
     {
+        OnButtonClick();
         ruleScene.SetActive(false);
     }
-        public void OnExitButtonClick()
+    public void OnExitButtonClick()
     {
-        
+
     }
 }
