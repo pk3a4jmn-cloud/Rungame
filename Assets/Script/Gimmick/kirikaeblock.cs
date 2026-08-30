@@ -32,11 +32,11 @@ public class kirikaeblock : MonoBehaviour
             }
         }
 
-        if(i < 0.3f)
+        if(i < 0.4f)
         {
             gameObject.layer = 6;
         }
-        if (i > 0.7f)
+        if (i > 0.4f)
         {
             gameObject.layer = 7;
         }
