@@ -8,7 +8,8 @@ public class TittleSceneManager : MonoBehaviour
     public void Start()
     {
         ruleScene.SetActive(false);
-         SoundManager.PlayBGM(BGM_Sound.Title);
+         
+        SoundManager.PlayBGM(BGM_Sound.Title);
     }
     public void OnButtonClick()
     {
