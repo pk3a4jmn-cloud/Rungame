@@ -43,7 +43,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
             //zキーでジャンプ 地面に立っている時のみ
             //マリオみたいにボタンを押す長さでジャンプ力を変える
-            if (Keyboard.current.zKey.wasPressedThisFrame && jimen == 1)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame && jimen == 1)
         {
             jimen = 0;
             jumpstart = 20;

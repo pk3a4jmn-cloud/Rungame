@@ -14,17 +14,6 @@ public class hantenblock : MonoBehaviour
     int layer1 = 0;
     int layer2 = 0;
 
-    private static readonly Color Black = new Color(0, 0, 0);
-    private static readonly Color white = new Color(1, 1, 1);
-    private static readonly Color Red = new Color(1, 0, 0);
-    private static readonly Color Blue = new Color(0, 0, 1);
-    private static readonly Color Yellow = new Color(1, 1, 0);
-    private static readonly Color Green = new Color(0, 1, 0);
-    private static readonly Color Purple = new Color(1, 0, 1);
-    private static readonly Color Orange = new Color(1, 0.5f, 0);
-
-
-
 
 
     [SerializeField]
@@ -37,14 +26,14 @@ public class hantenblock : MonoBehaviour
 
         switch (Color1)
         {
-            case ColorType.Black: c1 = new Color(0, 0, 0);  layer1 = 6; break;
-            case ColorType.white: c1 = new Color(1, 1, 1);  layer1 = 7; break;
-            case ColorType.Red: c1 = new Color(1, 0, 0);    layer1 = 8; break;
-            case ColorType.Blue: c1 = new Color(0, 0, 1);   layer1 = 9; break;
-            case ColorType.Yellow: c1 = new Color(1, 1, 0); layer1 = 10; break;
-            case ColorType.Green: c1 = new Color(0, 1, 0);  layer1 = 11; break;
-            case ColorType.Purple: c1 = new Color(1, 0, 1); layer1 = 12; break;
-            case ColorType.Orange: c1 = new Color(1, 0.5f, 0); layer1 = 13; break;
+            case ColorType.Black: c1 = new Color32(53, 53, 53, 255); layer1 = 6; break;
+            case ColorType.white: c1 = new Color32(241, 241, 241, 255); layer1 = 7; break;
+            case ColorType.Red: c1 = new Color32(255, 179, 179, 255); layer1 = 8; break;
+            case ColorType.Blue: c1 = new Color32(194, 237, 255, 255); layer1 = 9; break;
+            case ColorType.Yellow: c1 = new Color32(255, 244, 179, 255); layer1 = 10; break;
+            case ColorType.Green: c1 = new Color32(203, 230, 178, 255); layer1 = 11; break;
+            case ColorType.Purple: c1 = new Color32(239, 184, 255, 255); layer1 = 12; break;
+            case ColorType.Orange: c1 = new Color32(255, 196, 166, 255); layer1 = 13; break;
         }
         switch (Color2)
         {
