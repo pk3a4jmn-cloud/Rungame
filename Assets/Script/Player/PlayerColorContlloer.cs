@@ -4,14 +4,14 @@ using UnityEngine;
 public class PlayerColorContlloer : MonoBehaviour
 {
     
-    private static readonly Color Black = new Color(0, 0, 0);
-    private static readonly Color white = new Color(1, 1, 1);
-    private static readonly Color Red = new Color(1,0,0);
-    private static readonly Color Blue = new Color(0, 0, 1);
-    private static readonly Color Yellow = new Color(1, 1, 0);
-    private static readonly Color Green = new Color(0, 1, 0);
-    private static readonly Color Purple = new Color(1, 0, 1);
-    private static readonly Color Orange = new Color(1, 0.5f, 0);
+    private static readonly Color Black = new Color32(53, 53, 53,255);
+    private static readonly Color white = new Color32(241, 241, 241,255);
+    private static readonly Color Red = new Color32(255,179,179,255);
+    private static readonly Color Blue = new Color32(194, 237, 255,255);
+    private static readonly Color Yellow = new Color32(255, 244, 179,255);
+    private static readonly Color Green = new Color32(203, 230, 178,255);
+    private static readonly Color Purple = new Color32(239, 184, 255,255);
+    private static readonly Color Orange = new Color32(255, 196, 166,255);
 
     [SerializeField]
     private SpriteRenderer sprite;
@@ -29,7 +29,7 @@ public class PlayerColorContlloer : MonoBehaviour
     public void ChangeColor(ColorType color)
     {
         colorType = color;
-        //  colorWheelController.SetColor(colorType);
+        colorWheelController.SetColor(colorType);
         Debug.Log(color + "に色が変わったよ");
 
 

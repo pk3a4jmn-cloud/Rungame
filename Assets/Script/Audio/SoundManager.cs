@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance;
+    private static SoundManager Instance;
 
     [Header("Audio Source")]
     [SerializeField] private AudioSource BGMAudioSource;
