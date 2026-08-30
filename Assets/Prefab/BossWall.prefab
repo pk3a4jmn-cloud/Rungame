@@ -179,3 +179,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17845fb9af5b2a43858eb52e7c66dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossWall
+  render: {fileID: 5583013877996069885}
