@@ -1,7 +1,4 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ButtonHover : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
