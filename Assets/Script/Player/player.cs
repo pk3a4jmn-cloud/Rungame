@@ -90,17 +90,20 @@ public class NewMonoBehaviourScript : MonoBehaviour
             }
         }
 
-        /*
+        
         //下か上に落っこちたらMainsceneシーンを再読み込み
-        if (transform.position.y < -20.0f)
+        if (transform.position.y < -25.0f)
         {
-            SceneManager.LoadScene("Mainscene");
+            Debug.Log("死にました");
         }
-        if (transform.position.y > 20.0f)
+        if (transform.position.y > 25.0f)
         {
-            SceneManager.LoadScene("Mainscene");
+            Debug.Log("死にました");
         }
-        */
+        if (transform.position.x > camera.transform.position.x + 11.0f)
+        {
+            Debug.Log("死にました");
+        }
 
 
     }
