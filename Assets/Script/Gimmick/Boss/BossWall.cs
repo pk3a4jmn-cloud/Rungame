@@ -23,18 +23,42 @@ public class BossWall : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
+
     {
-        if (collider.CompareTag("Player"))
+
+        if (!collider.CompareTag("Player"))
+
         {
-            if (collider.gameObject.layer == gameObject.layer)
-            {
-                return;
-            }
-            else
-            {
-                //ゲームオーバー処理
-                Debug.Log("ゲームオーバー");
-            }
+
+            return;
+
         }
+
+        // 同じレイヤーなら無傷
+
+        if (collider.gameObject.layer == gameObject.layer)
+
+        {
+
+            return;
+
+        }
+
+        // 違う色の壁に当たったら死亡
+
+        Player player = collider.GetComponent<Player>();
+
+        if (player != null)
+
+        {
+
+            player.shibou();
+
+            Debug.Log("ゲームオーバー");
+
+        }
+
     }
+
 }
+
