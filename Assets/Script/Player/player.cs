@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
-{ 
+{
     int jimen = 0;
 
     float jumpForce = 600f;
@@ -36,10 +36,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(shibouflag)
+        if (shibouflag)
         {
             shiboucount++;
-            if(shiboucount > 150)
+            if (shiboucount > 150)
             {
                 SceneManager.LoadScene("Tittlescene");
             }
@@ -49,19 +49,19 @@ public class Player : MonoBehaviour
 
         //プレイヤーを右に動かす
         this.transform.position = new Vector3(this.transform.position.x - 0.05f, this.transform.position.y, 0);
-        
+
         //カメラを右に動かす
         //メインカメラと親子になっているカメラ操作用ブロックを動かしています。(メインカメラの動かし方が分からない為)
         camera.transform.position = new Vector3(camera.transform.position.x - 0.05f, camera.transform.position.y, 0);
-        
-        if(camera.transform.position.x + 2.0f < this.transform.position.x)
+
+        if (camera.transform.position.x + 2.0f < this.transform.position.x)
         {
             this.transform.position = new Vector3(this.transform.position.x - 0.02f, this.transform.position.y, 0);
         }
 
-            //zキーでジャンプ 地面に立っている時のみ
-            //マリオみたいにボタンを押す長さでジャンプ力を変える
-            if (Keyboard.current.spaceKey.wasPressedThisFrame && jimen == 1)
+        //zキーでジャンプ 地面に立っている時のみ
+        //マリオみたいにボタンを押す長さでジャンプ力を変える
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && jimen == 1)
         {
             jimen = 0;
             jumpstart = 20;
@@ -97,7 +97,8 @@ public class Player : MonoBehaviour
         if (Keyboard.current.wKey.wasPressedThisFrame && g == 1)
         {
             g = 0;
-            if (rb.gravityScale > 0.0f) {
+            if (rb.gravityScale > 0.0f)
+            {
                 rb.gravityScale = -4.0f;
                 GetComponent<SpriteRenderer>().flipY = true;
             }
@@ -108,7 +109,18 @@ public class Player : MonoBehaviour
             }
         }
 
-        
+        // Fキーで現在の色を反転
+        if (Keyboard.current.fKey.wasPressedThisFrame)
+        {
+            ColorType reverseColor =
+                ColorGridUtility.GetReverseColor(
+                    PlayerColorContlloer.Instance.colorType
+                );
+
+            PlayerColorContlloer.Instance.ChangeColor(reverseColor);
+        }
+
+
         //下か上に落っこちたらMainsceneシーンを再読み込み
         if (transform.position.y < -8.0f)
         {
