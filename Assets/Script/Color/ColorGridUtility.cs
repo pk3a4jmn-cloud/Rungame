@@ -9,8 +9,8 @@ public static class ColorGridUtility
     {
         ReverseColors = new Dictionary<ColorType ,ColorType>
         {
-            { ColorType.Black, ColorType.white},
-            { ColorType.white, ColorType.Black},
+            { ColorType.Black, ColorType.White},
+            { ColorType.White, ColorType.Black},
             { ColorType.Red, ColorType.Green},
             { ColorType.Green, ColorType.Red},
             { ColorType.Blue, ColorType.Orange},

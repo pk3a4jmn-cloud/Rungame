@@ -27,7 +27,7 @@ public class hantenblock : MonoBehaviour
         switch (Color1)
         {
             case ColorType.Black: c1 = new Color32(53, 53, 53, 255); layer1 = 6; break;
-            case ColorType.white: c1 = new Color32(241, 241, 241, 255); layer1 = 7; break;
+            case ColorType.White: c1 = new Color32(241, 241, 241, 255); layer1 = 7; break;
             case ColorType.Red: c1 = new Color32(255, 179, 179, 255); layer1 = 8; break;
             case ColorType.Blue: c1 = new Color32(194, 237, 255, 255); layer1 = 9; break;
             case ColorType.Yellow: c1 = new Color32(255, 244, 179, 255); layer1 = 10; break;
@@ -38,7 +38,7 @@ public class hantenblock : MonoBehaviour
         switch (Color2)
         {
             case ColorType.Black: c2 = new Color(0, 0, 0);  layer2 = 6; break;
-            case ColorType.white: c2 = new Color(1, 1, 1);  layer2 = 7; break;
+            case ColorType.White: c2 = new Color(1, 1, 1);  layer2 = 7; break;
             case ColorType.Red: c2 = new Color(1, 0, 0);    layer2 = 8; break;
             case ColorType.Blue: c2 = new Color(0, 0, 1);   layer2 = 9; break;
             case ColorType.Yellow: c2 = new Color(1, 1, 0); layer2 = 10; break;

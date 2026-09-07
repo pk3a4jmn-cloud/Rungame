@@ -20,7 +20,7 @@ public class PlayerColorContlloer : MonoBehaviour
     [SerializeField]
     private ColorWheelController colorWheelController;
 
-    public ColorType colorType = ColorType.white;
+    public ColorType colorType = ColorType.White;
     void Start()
     {
         ChangeColor(colorType);
@@ -42,7 +42,7 @@ public class PlayerColorContlloer : MonoBehaviour
             case ColorType.Black:
                 sprite.color = Black;
                 break;
-            case ColorType.white:
+            case ColorType.White:
                 sprite.color = white;
                 break;
             case ColorType.Red:

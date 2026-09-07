@@ -1,7 +1,7 @@
 public enum ColorType
 {
     Black,  //黒 
-    white,  //白
+    White,  //白
     Red,    //赤
     Blue,   //青
     Yellow, //黄色
