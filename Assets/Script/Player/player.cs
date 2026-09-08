@@ -20,6 +20,38 @@ public class Player : MonoBehaviour
     bool shibouflag = false;
 
     int shiboucount = 0;
+    private int GetColorLayer(ColorType colorType)
+    {
+        switch (colorType)
+        {
+            case ColorType.Black:
+                return 6;
+
+            case ColorType.White:
+                return 7;
+
+            case ColorType.Red:
+                return 8;
+
+            case ColorType.Blue:
+                return 9;
+
+            case ColorType.Yellow:
+                return 10;
+
+            case ColorType.Green:
+                return 11;
+
+            case ColorType.Purple:
+                return 12;
+
+            case ColorType.Orange:
+                return 13;
+
+            default:
+                return gameObject.layer;
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -110,6 +142,8 @@ public class Player : MonoBehaviour
         }
 
         // Fキーで現在の色を反転
+        // Fキーで現在の色を反転
+        // Fキーで現在の色を反転
         if (Keyboard.current.fKey.wasPressedThisFrame)
         {
             ColorType reverseColor =
@@ -117,7 +151,11 @@ public class Player : MonoBehaviour
                     PlayerColorContlloer.Instance.colorType
                 );
 
+            // 色を変更
             PlayerColorContlloer.Instance.ChangeColor(reverseColor);
+
+            // Layerも変更
+            gameObject.layer = GetColorLayer(reverseColor);
         }
 
 
