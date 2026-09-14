@@ -46,7 +46,7 @@ public class BossWall : MonoBehaviour
 
         // 違う色の壁に当たったら死亡
 
-        Player player = collider.GetComponent<Player>();
+        PlayerController player = collider.GetComponent<PlayerController>();
 
         if (player != null)
 

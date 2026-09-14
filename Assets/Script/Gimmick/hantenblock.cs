@@ -9,20 +9,25 @@ public class hantenblock : MonoBehaviour
 
     float i = 0.0f;
     double count;
-    public float 切り替え秒数 = 1;
+    public float ChangeTime = 1;
     float f;
     int layer1 = 0;
     int layer2 = 0;
 
+    [Header("Shake Settings")]
+    [SerializeField] private float shakeMagnitude = 0.08f; 
+     [SerializeField] private int shakeFrames = 15;          
 
+    private Vector3 initialPosition;
 
     [SerializeField]
     private SpriteRenderer sprite;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         Application.targetFrameRate = 60;
-        f = 切り替え秒数 * 60;
+        f = ChangeTime * 60;
+        initialPosition = transform.localPosition; 
 
         switch (Color1)
         {
@@ -37,24 +42,21 @@ public class hantenblock : MonoBehaviour
         }
         switch (Color2)
         {
-            case ColorType.Black: c2 = new Color(0, 0, 0);  layer2 = 6; break;
-            case ColorType.White: c2 = new Color(1, 1, 1);  layer2 = 7; break;
-            case ColorType.Red: c2 = new Color(1, 0, 0);    layer2 = 8; break;
-            case ColorType.Blue: c2 = new Color(0, 0, 1);   layer2 = 9; break;
-            case ColorType.Yellow: c2 = new Color(1, 1, 0); layer2 = 10; break;
-            case ColorType.Green: c2 = new Color(0, 1, 0);  layer2 = 11; break;
-            case ColorType.Purple: c2 = new Color(1, 0, 1); layer2 = 12; break;
-            case ColorType.Orange: c2 = new Color(1, 0.5f, 0); layer2 = 13; break;
+             case ColorType.Black: c2 = new Color32(53, 53, 53, 255); layer2 = 6; break;
+            case ColorType.White: c2 = new Color32(241, 241, 241, 255); layer2 = 7; break;
+            case ColorType.Red: c2 = new Color32(255, 179, 179, 255); layer2 = 8; break;
+            case ColorType.Blue: c2 = new Color32(194, 237, 255, 255); layer2 = 9; break;
+            case ColorType.Yellow: c2 = new Color32(255, 244, 179, 255); layer2 = 10; break;
+            case ColorType.Green: c2 = new Color32(203, 230, 178, 255); layer2 = 11; break;
+            case ColorType.Purple: c2 = new Color32(239, 184, 255, 255); layer2 = 12; break;
+            case ColorType.Orange: c2 = new Color32(255, 196, 166, 255); layer2 = 13; break;
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-
-        if(count < f)
-        {  
+        if (count < f)
+        {
         }
         else if (count < f + 10)
         {
@@ -80,11 +82,23 @@ public class hantenblock : MonoBehaviour
             count = 0;
         }
 
+     
+        bool isShaking = (count >= f - shakeFrames && count < f + 10) ||
+                         (count >= (f * 2 + 10) - shakeFrames && count < f * 2 + 20);
+
+        if (isShaking)
+        {
+            Vector2 offset = Random.insideUnitCircle * shakeMagnitude;
+            transform.localPosition = initialPosition + new Vector3(offset.x, offset.y, 0);
+        }
+        else
+        {
+            transform.localPosition = initialPosition;
+        }
 
         count++;
         sprite.color = new Color(c1.r * i + c2.r * (1.0f - i)
                                , c1.g * i + c2.g * (1.0f - i)
                                , c1.b * i + c2.b * (1.0f - i));
-
     }
 }

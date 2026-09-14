@@ -12,6 +12,13 @@ public class MainSceneManager : MonoBehaviour
     {
         Instance = this;
     }
+      public void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("TittleScene");
+        }
+    }
 
     public static void ChangeResult()
     {

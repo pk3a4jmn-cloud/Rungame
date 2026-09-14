@@ -141,8 +141,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        // Fキーで現在の色を反転
-        // Fキーで現在の色を反転
+
         // Fキーで現在の色を反転
         if (Keyboard.current.fKey.wasPressedThisFrame)
         {

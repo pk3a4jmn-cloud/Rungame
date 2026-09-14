@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ClosingWall : MonoBehaviour
 {
@@ -7,18 +8,31 @@ public class ClosingWall : MonoBehaviour
 
     [SerializeField] private float closingSpeed = 5f;
     [SerializeField] private float wallLifeTime = 5f;
+    [SerializeField] private float startDelay = 0.5f;
 
     public void InstanWall(int MyLayer)
     {
-        GameObject wall = Instantiate(wallPrefub, instanPoint.transform.position, Quaternion.identity);
+        StartCoroutine(SpawnWall(MyLayer));
+    }
 
-        //wallのlayerをBoss.csのOnTriggerで検知したcollliderのlayerに変更する
+    private IEnumerator SpawnWall(int MyLayer)
+    {
+        GameObject wall = Instantiate(
+            wallPrefub,
+            instanPoint.transform.position,
+            Quaternion.identity
+        );
+
         wall.layer = MyLayer;
 
         Rigidbody2D rb = wall.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = new Vector2(closingSpeed * -1, 0);
 
-        //wallの削除処理
+        rb.linearVelocity = Vector2.zero;
+
+        yield return new WaitForSeconds(startDelay);
+
+        rb.linearVelocity = new Vector2(-closingSpeed, 0);
+
         Destroy(wall, wallLifeTime);
     }
 }

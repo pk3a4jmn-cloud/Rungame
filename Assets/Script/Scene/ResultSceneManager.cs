@@ -16,7 +16,7 @@ public class ResultSceneManager : MonoBehaviour
     public void OnReStartButtonClick()
     {
         OnButtonClick();
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("GameScene");
         
     }
     public void OnBackTittleButtonClick()
