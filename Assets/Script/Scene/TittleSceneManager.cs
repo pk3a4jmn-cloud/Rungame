@@ -47,6 +47,7 @@ public class TittleSceneManager : MonoBehaviour
     }
     public void OnExitButtonClick()
     {
-
+         OnButtonClick();
+         Application.Quit();
     }
 }

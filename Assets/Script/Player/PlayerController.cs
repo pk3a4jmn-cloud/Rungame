@@ -235,14 +235,23 @@ public class PlayerController : MonoBehaviour
     // 死亡処理
 
 
-    public void shibou()
-    {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        Color color = spriteRenderer.color;
-        color.a = 0f;
-        spriteRenderer.color = color;
-        shibouflag = true;
-        GameObject go = Instantiate(Prefab_gameover);
-        go.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f); ;
-    }
+public void shibou()
+{
+    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+    Color color = spriteRenderer.color;
+    color.a = 0f;
+    spriteRenderer.color = color;
+
+    shibouflag = true;
+
+    Vector3 cameraPosition = Camera.main.transform.position;
+    cameraPosition.z = 0f;
+
+    GameObject go = Instantiate(
+        Prefab_gameover,
+        cameraPosition,
+        Quaternion.identity
+    );
+
+}
 }
